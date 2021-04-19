@@ -36,7 +36,7 @@
 					"proofPurpose": "assertionMethod",
 					"proofValue": "ABkB/wbvghvVEvYjw0rdpYgjfEutGZWAIwQkCDXehJs4p7oOVV2iBt6yGY8x9Il1ZQprbJuZibAwEMl4iBvTzxSBPgSa7C9fiNe91rnGvjCwUW2Ejsin+cHIwSdaKejco4t0UdJ5pG6lh/U2cP+LunRHei/YKy1iFH6eiPPxQUaPuw0jc+HOL4w6z7Go2yalNl9EvKobAAAAdLJlyYroxRDZsAjNi8zLPLeSKp28J9ISoNgPZmEA8k2cCJp+9IXfWANm75eyCRAQJQAAAAIGy+xOPNdALjNSmxVDrgb1s2EJgqospEKoF756YY+39lYXwKHCrwfanYohWLWmrG901mN+6zhQ0513gYbH3Lxls5xK6TGEXyV1V6LmxnwmHXO4A6D4zyHIHitDP+nZrKcjQx2jih0EaK0/5QTOYkq1AAAACQa9EVbX6nqLDI+f0+QraL5Q7nq/YYBRT1F+lnUYm8jUbHTzlfuKeKS0xzweqDFFG9UGR+t8L/xGmYCiOO7o17c7PqeRfQoh9/3vhGlIZVWq/nt7HZNJQQm4S+KoQKFoXibUnZDt4OL5IRqGo3C5nnSFstscSD03UkDDE/zleasLZf7Dx/9upj/L6Ex3J9zOhGbtEfc5d+qzkDvbYWHJ4pgYmpMACXb6GHHfdDgH4ZlzMBR5l4d0rHHbicVf8AtK1CIhokWoWM6++YioZ7Q6DKUtTnKSduApW2+AW1JwV38YNH2D0ja2OXlsli5fI8ui2h4wWJVqf/2O71a/5Fa7EmY2HFoZTrEyERNYIaan0uFuNM0mPxeLunw+h1rLsUpsbQ==",
 					"type": "BbsBlsSignatureProof2020",
-					"verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#key1"
+					"verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#jpzQoNEjlagQn4t6xxejULybTgQlnnTs9CNjsn1kNPU"
 				},
 				"type": [
 					"PermanentResidentCard",
@@ -46,9 +46,8 @@
 		]
   },
   "options": {
-    "kid": "mYsLv_7cIYb5YfuwhRlLWy_-6kM9IT4zlHuoaQi_8js",
     "signatureType": "BbsBlsSignature2020",
-    "verificationMethod": "did:panacea:aR7Cg46JamVbJgk8azVgUm7Prd74ry1Uct87nZqL3ny7#key1",
+    "verificationMethod": "did:panacea:aR7Cg46JamVbJgk8azVgUm7Prd74ry1Uct87nZqL3ny7#mYsLv_7cIYb5YfuwhRlLWy_-6kM9IT4zlHuoaQi_8js",
     "proofPurpose": "assertionMethod",
     "created": "2020-04-02T18:48:36Z",
     "domain": "https://example.org",

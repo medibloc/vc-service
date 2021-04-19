@@ -35,9 +35,8 @@
      }
   },
   "options": {
-    "kid": "jpzQoNEjlagQn4t6xxejULybTgQlnnTs9CNjsn1kNPU",
     "signatureType": "BbsBlsSignature2020",
-    "verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#key1",
+    "verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#jpzQoNEjlagQn4t6xxejULybTgQlnnTs9CNjsn1kNPU",
     "proofPurpose": "assertionMethod",
     "created": "2020-04-02T18:48:36Z"
   }

@@ -34,7 +34,7 @@
 			"proofPurpose": "assertionMethod",
 			"proofValue": "iJVnO7SjChT9xDm0PfVZ_LH0UWTpaJW86BWwOHUW43Ob8yU25VD7zLCa1krMAsyHUzpvfUD1UX2zgTZjbEbd_WipljumftE6MjuhcrfvBPRqALW9EGFzpWareO05P-JkzoRHtZQG7xvqnrzc2-HG9A",
 			"type": "BbsBlsSignature2020",
-			"verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#key1"
+			"verificationMethod": "did:panacea:7Prd74ry1Uct87nZqL3ny7aR7Cg46JamVbJgk8azVgUm#jpzQoNEjlagQn4t6xxejULybTgQlnnTs9CNjsn1kNPU"
 		},
 		"type": [
 			"VerifiableCredential",

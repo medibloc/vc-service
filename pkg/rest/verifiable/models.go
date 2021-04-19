@@ -33,7 +33,6 @@ type VerifyPresentationRequest struct {
 
 // ProofOptions is model to allow the dynamic proofing options by the user.
 type ProofOptions struct {
-	KID string `json:"kid,omitempty"`
 	// VerificationMethod is the URI of the verificationMethod used for the proof.
 	VerificationMethod      string                                 `json:"verificationMethod,omitempty"`
 	SignatureRepresentation *docverifiable.SignatureRepresentation `json:"signatureRepresentation,omitempty"`
