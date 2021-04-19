@@ -5,6 +5,8 @@ type Config struct {
 	AWSSecretAccessKey string `envconfig:"AWS_SECRET_ACCESS_KEY" required:"true"`
 	AWSRegion          string `envconfig:"AWS_REGION" required:"true"`
 	AWSKmsID           string `envconfig:"AWS_KMS_ID" required:"true"`
+
+	PanaceaRESTEndpoint string `envconfig:"PANACEA_REST_ENDPOINT" require:"true"`
 }
 
 var Cfg = &Config{}

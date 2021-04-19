@@ -11,10 +11,11 @@ import (
 	"github.com/hyperledger/aries-framework-go/spi/storage"
 	"github.com/medibloc/verifiable/pkg/aries/storage/awsparamstore"
 	"github.com/medibloc/verifiable/pkg/aries/vdr/panacea"
+	"github.com/medibloc/verifiable/pkg/config"
 )
 
 func NewProvider() (*context.Provider, error) {
-	panaceaVDR, err := panacea.New() // TODO: use a DID universal resolver (using httpbinding.VDR of Aries)
+	panaceaVDR, err := panacea.New(config.Cfg.PanaceaRESTEndpoint) // TODO: use a DID universal resolver (using httpbinding.VDR of Aries)
 	if err != nil {
 		return nil, err
 	}

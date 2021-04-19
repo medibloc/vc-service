@@ -14,10 +14,6 @@ type kmsSigner struct {
 }
 
 func getKID(opts *ProofOptions) string {
-	if opts.KID != "" {
-		return opts.KID
-	}
-
 	idSplit := strings.Split(opts.VerificationMethod, "#")
 	if len(idSplit) == creatorParts {
 		return idSplit[1]
