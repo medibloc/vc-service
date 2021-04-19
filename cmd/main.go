@@ -1,15 +1,19 @@
 package main
 
 import (
+	"github.com/kelseyhightower/envconfig"
 	"github.com/labstack/echo/v4"
 	"github.com/medibloc/verifiable/pkg/aries"
+	"github.com/medibloc/verifiable/pkg/config"
 	"github.com/medibloc/verifiable/pkg/rest/kms"
 	"github.com/medibloc/verifiable/pkg/rest/verifiable"
 	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	//TODO: load env vars
+	if err := envconfig.Process("", config.Cfg); err != nil {
+		log.Fatal(err)
+	}
 
 	ariesProvider, err := aries.NewProvider()
 	if err != nil {

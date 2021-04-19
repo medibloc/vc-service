@@ -4,7 +4,12 @@ import (
 	"github.com/hyperledger/aries-framework-go/component/storage/leveldb"
 	"github.com/hyperledger/aries-framework-go/pkg/framework/aries"
 	"github.com/hyperledger/aries-framework-go/pkg/framework/context"
+	"github.com/hyperledger/aries-framework-go/pkg/kms"
+	"github.com/hyperledger/aries-framework-go/pkg/kms/localkms"
+	"github.com/hyperledger/aries-framework-go/pkg/secretlock"
+	"github.com/hyperledger/aries-framework-go/pkg/secretlock/noop"
 	"github.com/hyperledger/aries-framework-go/spi/storage"
+	"github.com/medibloc/verifiable/pkg/aries/storage/awsparamstore"
 	"github.com/medibloc/verifiable/pkg/aries/vdr/panacea"
 )
 
@@ -15,7 +20,7 @@ func NewProvider() (*context.Provider, error) {
 	}
 
 	//TODO: Use AWS Parameter Store as a KMS
-	framework, err := aries.New(aries.WithStoreProvider(getStorageProvider()), aries.WithVDR(panaceaVDR))
+	framework, err := aries.New(aries.WithStoreProvider(getStorageProvider()), aries.WithVDR(panaceaVDR), aries.WithKMS(getKMSCreator()))
 	if err != nil {
 		return nil, err
 	}
@@ -30,4 +35,23 @@ func NewProvider() (*context.Provider, error) {
 
 func getStorageProvider() storage.Provider {
 	return leveldb.NewProvider("") //TODO: path (prefix)
+}
+
+type kmsProvider struct {
+	storageProvider storage.Provider
+	secretLock      secretlock.Service
+}
+
+func (k kmsProvider) StorageProvider() storage.Provider {
+	return k.storageProvider
+}
+
+func (k kmsProvider) SecretLock() secretlock.Service {
+	return k.secretLock
+}
+
+func getKMSCreator() func(provider kms.Provider) (kms.KeyManager, error) {
+	return func(provider kms.Provider) (kms.KeyManager, error) {
+		return localkms.New("local-lock://custom/master/key/", &kmsProvider{awsparamstore.NewProvider(), &noop.NoLock{}})
+	}
 }
