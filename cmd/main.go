@@ -3,10 +3,10 @@ package main
 import (
 	"github.com/kelseyhightower/envconfig"
 	"github.com/labstack/echo/v4"
-	"github.com/medibloc/verifiable/pkg/aries"
-	"github.com/medibloc/verifiable/pkg/config"
-	"github.com/medibloc/verifiable/pkg/rest/kms"
-	"github.com/medibloc/verifiable/pkg/rest/verifiable"
+	"github.com/medibloc/vc-service/pkg/aries"
+	"github.com/medibloc/vc-service/pkg/config"
+	"github.com/medibloc/vc-service/pkg/rest/kms"
+	"github.com/medibloc/vc-service/pkg/rest/verifiable"
 	log "github.com/sirupsen/logrus"
 )
 

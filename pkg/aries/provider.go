@@ -9,9 +9,9 @@ import (
 	"github.com/hyperledger/aries-framework-go/pkg/secretlock"
 	"github.com/hyperledger/aries-framework-go/pkg/secretlock/noop"
 	"github.com/hyperledger/aries-framework-go/spi/storage"
-	"github.com/medibloc/verifiable/pkg/aries/storage/awsparamstore"
-	"github.com/medibloc/verifiable/pkg/aries/vdr/panacea"
-	"github.com/medibloc/verifiable/pkg/config"
+	"github.com/medibloc/vc-service/pkg/aries/storage/awsparamstore"
+	"github.com/medibloc/vc-service/pkg/aries/vdr/panacea"
+	"github.com/medibloc/vc-service/pkg/config"
 )
 
 func NewProvider() (*context.Provider, error) {

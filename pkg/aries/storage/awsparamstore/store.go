@@ -14,7 +14,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ssm"
 	"github.com/aws/aws-sdk-go-v2/service/ssm/types"
 
-	appconfig "github.com/medibloc/verifiable/pkg/config"
+	appconfig "github.com/medibloc/vc-service/pkg/config"
 )
 
 type store struct {
