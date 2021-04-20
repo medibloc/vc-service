@@ -24,8 +24,9 @@ Or, verifiers can provide a mobile app which scans QR codes of holders.
 Also, the `vc-service` has pluggable designs.
 - can resolve DIDs from various [VDR (Verifiable Data Registry)](https://www.w3.org/TR/did-core/#dfn-verifiable-data-registry).
 	- Currently, only Panacea blockchain is supported.
-- can store private keys into various KMS (Key Management System).
+- can create/store/delete private keys in various KMS (Key Management System).
 	- Currently, only AWS Parameter Store is supported.
+		- Keys are stored in the format understood by Google [Tink](https://opensource.google/projects/tink).
 
 
 ## Building / Running
