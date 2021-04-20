@@ -18,7 +18,7 @@ The following diagram is a sample architecture using `vc-service`s by each party
 
 According to business requirements of each party, their architectures can be changed.
 For example, the issuer and holders can use the same `vc-service` if the holder's app is tightly coupled with the issuer in the business point of view.
-Or, verifiers can present a mobile app which scans QR codes of holders.
+Or, verifiers can provide a mobile app which scans QR codes of holders.
 **The `vc-service` is designed as general as possible, so that it can be used for various architectures in decentralized environments.**
 
 Also, the `vc-service` has pluggable designs.
