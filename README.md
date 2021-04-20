@@ -1,9 +1,9 @@
 # VerifiableCredential Service
 
-A REST service for signing/verifying VerifiableCredential/Presentation
-
 ## Features
 
+- REST API
+    - following the [W3C standard spec](https://w3c-ccg.github.io/vc-http-api/)
 - Signing [VerifiableCredential](https://www.w3.org/TR/vc-data-model/) / [VerifiablePresentation](https://www.w3.org/TR/vc-data-model/#presentations-0)
 	- using private keys stored in KMS
 - Deriving VerificationCredential for selective disclosure
