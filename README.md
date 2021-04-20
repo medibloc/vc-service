@@ -5,7 +5,7 @@ A REST service for signing/verifying VerifiableCredential/Presentation
 ## Features
 
 - Signing [VerifiableCredential](https://www.w3.org/TR/vc-data-model/) / [VerifiablePresentation](https://www.w3.org/TR/vc-data-model/#presentations-0)
-	- using private keys stored in AWS Parameter Store (pluggable)
+	- using private keys stored in KMS
 - Deriving VerificationCredential for selective disclosure
 	- by [Zero-Knowledge Proof](https://www.w3.org/TR/vc-data-model/#zero-knowledge-proofs) using [BBS+ signature](https://w3c-ccg.github.io/ldp-bbs2020/)
 - Verifiying VerificationCredential / VerifiablePresentation
@@ -22,7 +22,7 @@ Or, verifiers can present a mobile app which scans QR codes of holders.
 **The `vc-service` is designed as general as possible, so that it can be used for various architectures in decentralized environments.**
 
 Also, the `vc-service` has pluggable designs.
-- can resolve DIDs from various VDR (Verifiable Data Registry).
+- can resolve DIDs from various [VDR (Verifiable Data Registry)](https://www.w3.org/TR/did-core/#dfn-verifiable-data-registry).
 	- Currently, only Panacea blockchain is supported.
 - can store private keys into various KMS (Key Management System).
 	- Currently, only AWS Parameter Store is supported.
