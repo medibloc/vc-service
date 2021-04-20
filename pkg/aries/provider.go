@@ -15,12 +15,11 @@ import (
 )
 
 func NewProvider() (*context.Provider, error) {
-	panaceaVDR, err := panacea.New(config.Cfg.PanaceaRESTEndpoint) // TODO: use a DID universal resolver (using httpbinding.VDR of Aries)
+	panaceaVDR, err := panacea.New(config.Cfg.PanaceaRESTEndpoint)
 	if err != nil {
 		return nil, err
 	}
 
-	//TODO: Use AWS Parameter Store as a KMS
 	framework, err := aries.New(aries.WithStoreProvider(getStorageProvider()), aries.WithVDR(panaceaVDR), aries.WithKMS(getKMSCreator()))
 	if err != nil {
 		return nil, err
