@@ -39,3 +39,21 @@ docker run -e PORT=8888 -p 8888:8888 vc-service
 |WRITE_TIMEOUT|HTTP write timeout|10s|
 |IDLE_TIMEOUT|HTTP idle timeout|60s|
 
+
+## REST API
+
+### Sign credential
+
+```bash
+curl -X POST localhost:8888/credentials/issue -d @samples/issue-credential.json
+```
+
+The sample JSON file is in the [samples/](samples) directory.
+
+### Responses
+
+|Status Code|Description|
+|-----------|-----------|
+|201|Credential successfully issued|
+|400|Invalid input|
+|500|Internal error|
