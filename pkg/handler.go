@@ -3,7 +3,6 @@ package pkg
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"net/http"
 
 	log "github.com/sirupsen/logrus"
@@ -23,7 +22,7 @@ func healthCheckHandler(writer http.ResponseWriter, request *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
 	writer.WriteHeader(http.StatusOK)
 
-	io.WriteString(writer, `{"alive": true}`)
+	writer.Write([]byte(`{"alive": true}`))
 }
 
 func issueCredentialHandler(writer http.ResponseWriter, request *http.Request) {
