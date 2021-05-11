@@ -11,7 +11,18 @@ import (
 )
 
 func RegisterHandlers(r *mux.Router) {
+	// health check
+	r.HandleFunc("/health", healthCheckHandler).Methods("GET")
+
+	// credentials
 	r.HandleFunc("/credentials/issue", issueCredentialHandler).Methods("POST")
+}
+
+func healthCheckHandler(writer http.ResponseWriter, request *http.Request) {
+	writer.Header().Set("Content-Type", "application/json")
+	writer.WriteHeader(http.StatusOK)
+
+	writer.Write([]byte(`{"alive": true}`))
 }
 
 func issueCredentialHandler(writer http.ResponseWriter, request *http.Request) {
