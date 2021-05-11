@@ -16,6 +16,7 @@ type signOptions struct {
 	SignatureType      string `json:"signatureType"`
 	VerificationMethod string `json:"verificationMethod"`
 	ProofPurpose       string `json:"proofPurpose,omitempty"`
+	Created            string `json:"created,omitempty"`
 	Domain             string `json:"domain,omitempty"`
 	Challenge          string `json:"challenge,omitempty"`
 	CredentialStatus   string `json:"credentialStatus,omitempty"`
@@ -25,6 +26,7 @@ func (o *signOptions) vcProofOptions() *vc.ProofOptions {
 	return &vc.ProofOptions{
 		VerificationMethod: o.VerificationMethod,
 		SignatureType:      o.SignatureType,
+		Created:            o.Created,
 		Domain:             o.Domain,
 		Challenge:          o.Challenge,
 		// TODO: handle proofPurpose, credentialStatus
